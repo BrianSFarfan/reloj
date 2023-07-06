@@ -1,0 +1,7 @@
+font-face {
+    font-family: "digital";
+    src: url(http://mi-servidor.cl/archivos/tipografia.ttf) format("opentype", "truetype");
+}
+ body{
+    font-family: "digital", Garamond, monospace;
+ }
