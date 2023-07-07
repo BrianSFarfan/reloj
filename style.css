@@ -1,7 +1,63 @@
-font-face {
-    font-family: "digital";
-    src: url(http://mi-servidor.cl/archivos/tipografia.ttf) format("opentype", "truetype");
-}
- body{
-    font-family: "digital", Garamond, monospace;
- }
+@font-face {
+    font-family: 'reloj-font'; /* Nombre que le darás a la fuente */
+    src: url('font/DS-DIGI.TTF') format('truetype'); /* Ruta relativa a la ubicación de la fuente */
+  }
+  
+  :root{
+    --backgroundColor:black ;
+    --colorHoraYFecha: red;
+  }
+
+  body {
+    font-family: 'reloj-font', sans-serif; /* Utiliza el nombre de la fuente especificado en font-family */
+    margin: 0;
+    padding: 50px;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+  }
+
+  .container{
+    display: grid;
+    margin: auto;
+    width: min(100%, 800px);
+    gap: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 15px 5px var(--backgroundColor);
+    background-color: var(--backgroundColor);
+    color: var(--colorHoraYFecha);
+    text-shadow: 0px 0px 10px var(--colorHoraYFecha);
+    padding: 10px;
+  }
+  .hora{
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+    animation: parpadeo 01s infinite; 
+    transform-style: preserve-3d;
+  }
+  .fecha{
+    padding: 0;
+    margin: 0;
+  }
+  .text {
+    display: inline-block;
+    font-size: 24px;
+
+  }
+  /*ANIMACION*/
+  /* @keyframes parpadeo {
+    0% {
+  transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg);
+  perspective: 300px;
+    }
+    100% {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      perspective: 300px;
+    } */
+  }
+ 
+  
+  
+  
