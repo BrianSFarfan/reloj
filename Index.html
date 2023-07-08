@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,21 @@
 </head>
 <body>
   <section class="container">
-    <h1 id="variableHoraActualCompleto" class="hora"></h1>
-    <h3 id="variableFechaActualCompleta" class="fecha"></h3>
+    <div class="contenedorHora">
+      <h1 id="variableHoraActualCompleto" class="hora"></h1>
+    </div>
+
+    <div class="contenedorFecha">
+      <h3 id="variableFechaActualCompleta" class="fecha"></h3>
+    </div>
+
+    <button id="darkMode">
+      <img src="IMG/darkMode.png" class="imgDarkMode">
+    </button>
   </section>
   <script src="script.js"></script>
+  <script src="darkMode.js"></script>
+
+  <script src="https://kit.fontawesome.com/bd02cb6ae0.js" crossorigin="anonymous"></script>
 </body>
 </html>

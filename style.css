@@ -3,11 +3,18 @@
     src: url('font/DS-DIGI.TTF') format('truetype'); /* Ruta relativa a la ubicación de la fuente */
   }
   
-  :root{
-    --backgroundColor:black ;
-    --colorHoraYFecha: red;
-  }
+  [data-theme="light"]{
+    --darkMode: invert(0);
+ }
 
+ [data-theme="dark"]{
+    --darkMode: invert(1);
+ }
+ html{
+  filter: var(--darkMode);
+  transition: 1s;
+ }
+  
   body {
     font-family: 'reloj-font', sans-serif; /* Utiliza el nombre de la fuente especificado en font-family */
     margin: 0;
@@ -16,6 +23,7 @@
     height: 100vh;
     padding: 0;
     display: flex;
+    background-color: white;
   }
 
   .container{
@@ -24,8 +32,6 @@
     width: min(100%, 800px);
     gap: 5px;
     text-align: center;
-    box-shadow: 0px 0px 15px 5px var(--backgroundColor);
-    background-color: var(--backgroundColor);
     color: var(--colorHoraYFecha);
     text-shadow: 0px 0px 10px var(--colorHoraYFecha);
     padding: 10px;
@@ -36,14 +42,55 @@
     padding: 0;
     animation: parpadeo 01s infinite; 
     transform-style: preserve-3d;
+    text-shadow: 0px 0px 10px;
+  }
+  .contenedorHora,.contenedorFecha {
+    display: flex;
+    position: relative;
+    margin: auto;
   }
   .fecha{
     padding: 0;
     margin: 0;
+    text-shadow: 0px 0px 10px black;
   }
   .text {
     display: inline-block;
     font-size: 24px;
+
+  }
+
+
+  #darkMode{
+    border: 0;
+    width: auto;
+    height: 30px;
+
+    padding: 0;
+    border-radius: 50px;
+    margin-top: 50px;
+    transition: 1s;
+    background: none;
+    opacity: 0.3;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0px 0px 15px;
+
+    bottom: 10%;
+}
+  
+
+  #darkMode:hover{
+    opacity: 1;
+    box-shadow: 0px 0px 15px;
+  }
+  .activeDM{
+    transform: rotate(360deg);
+  }
+  .imgDarkMode{
+    
+    width: 30px;
+    transform: scale(103%);
 
   }
   /*ANIMACION*/
@@ -56,7 +103,7 @@
       transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
       perspective: 300px;
     } */
-  }
+  
  
   
   
