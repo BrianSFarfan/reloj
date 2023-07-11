@@ -117,6 +117,27 @@ body {
 
 }
 
+#lunaSol {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: apareceer 5s ease-in-out; /* Ajusta la duración y el tipo de interpolación según tus necesidades */
+  animation-delay: 4s;
+  animation-fill-mode: forwards; /* Los estilos finales se mantienen */
+
+}
+
+.luna,.sol{
+  color: black;
+  text-shadow: 0px 0px 15px;
+  display: flex;
+}
+
+.apagar{
+  display: none !important;
+}
+
+
 /*ANIMACION*/
 @keyframes arribaApareceer {
   0% {

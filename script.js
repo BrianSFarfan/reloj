@@ -3,7 +3,9 @@ var fechaActual;
 
 var horaYFecha;
 var variableFecha;
-
+var lunaSol;
+var sol;
+var luna;
 var horaActual;
 
 function obtenerHora() {
@@ -14,7 +16,6 @@ function obtenerHora() {
   var segundos = fechaActual.getSeconds().toString().padStart(2, '0'); // Agrega cero delante si tiene un solo dígito
 
   variableHora = hora + ":" + minutos + ":" + segundos;
-
   return variableHora;
 }
 
@@ -25,7 +26,7 @@ function obtenerFecha() {
   var mes = (fechaActual.getMonth() + 1).toString().padStart(2, '0'); // Agrega cero delante si tiene un solo dígito
   var año = fechaActual.getFullYear();
 
-  variableFecha = dia + "/" + mes + "/" + año;
+  variableFecha = dia + " / " + mes + " / " + año;
 
   return variableFecha;
 }
@@ -41,4 +42,29 @@ setInterval(function() {
   fechaActual = obtenerFecha();
   variableHoraActual.textContent = variableHora;
   variableFechaActual.textContent = variableFecha;
+  console.log(variableHora);
+
+
+  if (horaActual>= "06:00:00" && horaActual < "17:00:00") {
+    console.log("es de dia");
+
+    // lunaSol = document.getElementById("lunaSol");
+    luna = document.getElementById("luna");
+    sol = document.getElementById("sol");
+
+    luna.classList.add("apagar");
+    sol.classList.remove("apagar");
+
+  }else{
+    console.log("es de noche");
+    luna = document.getElementById("luna");
+    sol = document.getElementById("sol");
+
+    luna.classList.remove("apagar");
+    sol.classList.add("apagar");
+  }
 }, 1000);
+
+
+
+
