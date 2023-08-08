@@ -52,7 +52,7 @@ setInterval(function() {
   variableHoraActual.textContent = variableHora;
   variableFechaActual.textContent = variableFecha;
   variableSegundosActual.textContent= segundosActual;
-  console.log(variableHora + variableSegundos);
+  console.log(variableHora);
 
 
   if (horaActual>= "06:00" && horaActual < "17:00") {
