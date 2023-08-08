@@ -156,6 +156,9 @@ body {
 
 }
 
+.fullscreen-active{
+  filter: invert(1);
+}
 /*ANIMACION*/
 @keyframes arribaApareceer {
   0% {
