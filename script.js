@@ -1,6 +1,6 @@
 var variableHora;
 var fechaActual;
-
+var segundosActual
 var horaYFecha;
 var variableFecha;
 var lunaSol;
@@ -13,9 +13,8 @@ function obtenerHora() {
 
   var hora = fechaActual.getHours().toString().padStart(2, '0'); // Agrega cero delante si tiene un solo dígito
   var minutos = fechaActual.getMinutes().toString().padStart(2, '0'); // Agrega cero delante si tiene un solo dígito
-  var segundos = fechaActual.getSeconds().toString().padStart(2, '0'); // Agrega cero delante si tiene un solo dígito
 
-  variableHora = hora + ":" + minutos + ":" + segundos;
+  variableHora = hora + ":" + minutos;
   return variableHora;
 }
 
@@ -30,22 +29,33 @@ function obtenerFecha() {
 
   return variableFecha;
 }
+function ObtenerSegundos(){
+  segundosActual = new Date();
+
+  var variableSegundos = segundosActual.getSeconds().toString().padStart(2, '0'); // Agrega cero delante si tiene un solo dígito
+  return variableSegundos;
+}  
 
 // Obtener el elemento con el id "variableHoraActualCompleto"
 var variableHoraActual = document.getElementById("variableHoraActualCompleto");
 var variableFechaActual = document.getElementById("variableFechaActualCompleta");
+var variableSegundosActual = document.getElementById("variableSegundosCompleta");
 
 // Actualizar la hora y fecha cada segundo
 
 setInterval(function() {
   horaActual = obtenerHora();
   fechaActual = obtenerFecha();
+  segundosActual= ObtenerSegundos();
+
+
   variableHoraActual.textContent = variableHora;
   variableFechaActual.textContent = variableFecha;
-  console.log(variableHora);
+  variableSegundosActual.textContent= segundosActual;
+  console.log(variableHora + variableSegundos);
 
 
-  if (horaActual>= "06:00:00" && horaActual < "17:00:00") {
+  if (horaActual>= "06:00" && horaActual < "17:00") {
     console.log("es de dia");
 
     // lunaSol = document.getElementById("lunaSol");
