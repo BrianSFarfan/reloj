@@ -145,6 +145,16 @@ body {
   display: none !important;
 }
 
+#fullScreen{
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+}
 
 /*ANIMACION*/
 @keyframes arribaApareceer {
