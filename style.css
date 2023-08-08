@@ -171,9 +171,9 @@ body {
 @media screen and (max-height: 400px) {
   #darkMode{
     position: absolute;
-    top: 50%;
+    top: 12.5px;
     left: 10px;
-    transform: translate(0,-50%);
+    transform: scale(0.7);
     margin: 0;
   }
   #lunaSol{
