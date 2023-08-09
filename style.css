@@ -58,12 +58,18 @@ body {
   animation-fill-mode: forwards; /* Los estilos finales se mantienen */
   opacity: 0;
 }
-.contenedorHora,
+.contenedorHora{
+  display: flex;
+  position: relative;
+  margin: auto;
+}
+
 .contenedorFecha {
   display: flex;
   position: relative;
   margin: auto;
 }
+
 
 .fecha {
   padding: 0;
@@ -168,6 +174,9 @@ body {
   transition: 1s;
   filter: invert(1);
 }
+.dosPuntos{
+  animation: tictoc 1s infinite cubic-bezier(1,0, 1,0);
+}
 /*ANIMACION*/
 @keyframes arribaApareceer {
   0% {
@@ -189,8 +198,18 @@ body {
   }
 }
 
-
-@media screen and (max-height: 400px) {
+@keyframes tictoc {
+  0% {
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media screen and (max-height: 600px) {
   #darkMode{
     position: absolute;
     top: 12.5px;
@@ -208,6 +227,17 @@ body {
   .hora{
     font-size: 15rem;
   }
- 
+  .contenedorHora{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .contenedorFecha{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -30px);
+  }
 }
 
