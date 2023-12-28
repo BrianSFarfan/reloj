@@ -21,6 +21,9 @@
       <h1 id="variableMinutosActualCompleto" class="hora"></h1>
       <p id="variableSegundosCompleta" class="segundos"></p>
     </div>
+    
+    <div id="diaFecha" class="diaFecha"></div>
+
 
     <div class="contenedorFecha">
       <h3 id="variableFechaActualCompleta" class="fecha"></h3>
@@ -29,13 +32,18 @@
     <button id="darkMode">
       <img src="IMG/darkMode.png" class="imgDarkMode">
     </button>
-    <button id="fullScreen">
-      <i class="fa-solid fa-expand"></i>
-    </button>
+   
   </section>
 
   <nav class="navbar">
-   
+
+    <button id="cambiarVista" onclick="cambiarVista()">
+      <i class="fa-solid fa-window-restore"></i>
+    </button>
+    <button id="fullScreen">
+      <i class="fa-solid fa-expand"></i>
+    </button>
+
   </nav>
 
   <script src="script.js"></script>

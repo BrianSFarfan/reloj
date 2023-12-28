@@ -91,4 +91,17 @@ setInterval(function() {
 
 
 
+var dia="16";
+var mes="November";
+var anio="2016";
+diaSemana(dia, mes,anio);
+
+function diaSemana(dia,mes,anio){
+  var dias=["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"]; //Lista de dias :D
+  var dt = new Date(mes+' '+dia+', '+anio+' 12:00:00');
+  console.log("Dias posicion: " +(dt.getUTCDay()));
+  document.getElementById('diaFecha').innerHTML = dias[dt.getUTCDay()];    
+};
+
+ 
 
